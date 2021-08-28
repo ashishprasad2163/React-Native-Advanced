@@ -18,45 +18,17 @@ import {
   View,
 } from 'react-native';
 import Circle from './src/components/Circle';
-// import {
-//   Colors,
-//   DebugInstructions,
-//   Header,
-//   LearnMoreLinks,
-//   ReloadInstructions,
-// } from 'react-native/Libraries/NewAppScreen';
-
-// const Section = ({children, title}): Node => {
-//   const isDarkMode = useColorScheme() === 'dark';
-//   return (
-//     <View style={styles.sectionContainer}>
-//       <Text
-//         style={[
-//           styles.sectionTitle,
-//           {
-//             color: isDarkMode ? Colors.white : Colors.black,
-//           },
-//         ]}>
-//         {title}
-//       </Text>
-//       <Text
-//         style={[
-//           styles.sectionDescription,
-//           {
-//             color: isDarkMode ? Colors.light : Colors.dark,
-//           },
-//         ]}>
-//         {children}
-//       </Text>
-//     </View>
-//   );
-// };
+import Deck from './src/components/Deck';
 
 const App = () => {
+  const renderCards = (item) => (
+     <Text>{item.text}</Text>
+  );
   return (
     <SafeAreaView >
       <StatusBar barStyle={true ? 'light-content' : 'dark-content'} />
-        <Circle/>
+        {/* <Circle/> */}
+        <Deck />
     </SafeAreaView>
   );
 };
